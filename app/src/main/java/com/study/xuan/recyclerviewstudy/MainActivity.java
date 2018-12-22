@@ -29,6 +29,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         tvCreateAndBind = findViewById(R.id.tv_create_and_bind);
         scrollView = findViewById(R.id.scroll);
         mData = new ArrayList<>();
+        packData();
+
         mAdapter = new RcyAdapter(mData, this, rcy, tvCreateAndBind);
         rcy.setAdapter(mAdapter);
         rcy.setOnLayoutListener(new SRecyclerView.onLayoutListener() {
